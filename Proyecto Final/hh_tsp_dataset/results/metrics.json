@@ -1,0 +1,235 @@
+{
+ "balance_total": {
+  "mst_2opt": 53.4,
+  "sa_2opt": 31.8,
+  "2opt_hill_climbing": 14.8
+ },
+ "balance_total_n": {
+  "mst_2opt": 267,
+  "sa_2opt": 159,
+  "2opt_hill_climbing": 74
+ },
+ "balance_train": {
+  "mst_2opt": 189,
+  "sa_2opt": 111,
+  "2opt_hill_climbing": 51
+ },
+ "balance_test": {
+  "mst_2opt": 78,
+  "sa_2opt": 48,
+  "2opt_hill_climbing": 23
+ },
+ "majority": "mst_2opt",
+ "baseline_acc": 0.5234899328859061,
+ "dt_params": {
+  "class_weight": "balanced",
+  "max_depth": 6,
+  "min_samples_leaf": 10
+ },
+ "dt_cv": 0.584,
+ "knn_params": {
+  "kneighborsclassifier__n_neighbors": 15,
+  "kneighborsclassifier__weights": "distance"
+ },
+ "knn_cv": 0.595,
+ "best_model": "Arbol de Decision",
+ "results": {
+  "Arbol de Decision": {
+   "acc": 0.6107,
+   "bal_acc": 0.5566,
+   "regret": 0.0793,
+   "regret_pct": 1.7126
+  },
+  "KNN": {
+   "acc": 0.5973,
+   "bal_acc": 0.4804,
+   "regret": 0.0823,
+   "regret_pct": 1.9164
+  },
+  "Baseline (siempre mst_2opt)": {
+   "acc": 0.5235,
+   "bal_acc": 0.3333,
+   "regret": 0.1132,
+   "regret_pct": 2.4872
+  },
+  "Siempre 2opt_hill_climbing": {
+   "acc": 0.1544,
+   "bal_acc": 0.3333,
+   "regret": 0.1544,
+   "regret_pct": 3.4104
+  }
+ },
+ "cm": {
+  "Arbol de Decision": [
+   [
+    7,
+    10,
+    6
+   ],
+   [
+    3,
+    36,
+    9
+   ],
+   [
+    13,
+    17,
+    48
+   ]
+  ],
+  "KNN": [
+   [
+    3,
+    8,
+    12
+   ],
+   [
+    3,
+    26,
+    19
+   ],
+   [
+    6,
+    12,
+    60
+   ]
+  ]
+ },
+ "report_best": {
+  "2opt_hill_climbing": {
+   "precision": 0.30434782608695654,
+   "recall": 0.30434782608695654,
+   "f1-score": 0.30434782608695654,
+   "support": 23.0
+  },
+  "sa_2opt": {
+   "precision": 0.5714285714285714,
+   "recall": 0.75,
+   "f1-score": 0.6486486486486487,
+   "support": 48.0
+  },
+  "mst_2opt": {
+   "precision": 0.7619047619047619,
+   "recall": 0.6153846153846154,
+   "f1-score": 0.6808510638297872,
+   "support": 78.0
+  },
+  "accuracy": 0.610738255033557,
+  "macro avg": {
+   "precision": 0.5458937198067633,
+   "recall": 0.556577480490524,
+   "f1-score": 0.5446158461884641,
+   "support": 149.0
+  },
+  "weighted avg": {
+   "precision": 0.6299137104506233,
+   "recall": 0.610738255033557,
+   "f1-score": 0.612359181972205,
+   "support": 149.0
+  }
+ },
+ "importances": {
+  "mean_nn_dist": 0.462,
+  "n": 0.261,
+  "mean_pairwise_dist": 0.189,
+  "std_coords": 0.087,
+  "mean_centroid_dist": 0.0,
+  "dist_uniform": 0.0,
+  "dist_clustered": 0.0,
+  "dist_border": 0.0
+ },
+ "perm_importance": {
+  "mean_pairwise_dist": 0.117,
+  "mean_nn_dist": 0.085,
+  "n": 0.068,
+  "mean_centroid_dist": 0.0,
+  "dist_clustered": 0.0,
+  "dist_uniform": 0.0,
+  "dist_border": 0.0,
+  "std_coords": -0.007
+ },
+ "pat_dist": {
+  "border": {
+   "2opt_hill_climbing": 14.5,
+   "mst_2opt": 72.9,
+   "sa_2opt": 12.7
+  },
+  "clustered": {
+   "2opt_hill_climbing": 18.0,
+   "mst_2opt": 47.3,
+   "sa_2opt": 34.7
+  },
+  "uniform": {
+   "2opt_hill_climbing": 12.0,
+   "mst_2opt": 40.1,
+   "sa_2opt": 47.9
+  }
+ },
+ "pat_size": {
+  "5-10": {
+   "2opt_hill_climbing": 7.0,
+   "mst_2opt": 90.4,
+   "sa_2opt": 2.6
+  },
+  "15-20": {
+   "2opt_hill_climbing": 11.4,
+   "mst_2opt": 59.6,
+   "sa_2opt": 28.9
+  },
+  "30-40": {
+   "2opt_hill_climbing": 11.8,
+   "mst_2opt": 40.0,
+   "sa_2opt": 48.2
+  },
+  "60-100": {
+   "2opt_hill_climbing": 24.7,
+   "mst_2opt": 32.1,
+   "sa_2opt": 43.2
+  }
+ },
+ "gap_by_size": {
+  "5-10": {
+   "gap_2opt": 0.25,
+   "gap_sa": 0.0,
+   "gap_mst": 0.24
+  },
+  "15-20": {
+   "gap_2opt": 2.07,
+   "gap_sa": 0.02,
+   "gap_mst": 1.62
+  },
+  "30-40": {
+   "gap_2opt": 2.26,
+   "gap_sa": 0.27,
+   "gap_mst": 2.51
+  },
+  "60-100": {
+   "gap_2opt": 5.64,
+   "gap_sa": 2.68,
+   "gap_mst": 5.5
+  }
+ },
+ "gap_by_dist": {
+  "border": {
+   "gap_2opt": 3.02,
+   "gap_sa": 1.87,
+   "gap_mst": 3.7
+  },
+  "clustered": {
+   "gap_2opt": 2.08,
+   "gap_sa": 0.78,
+   "gap_mst": 1.68
+  },
+  "uniform": {
+   "gap_2opt": 3.46,
+   "gap_sa": 0.16,
+   "gap_mst": 2.9
+  }
+ },
+ "ties_pct": 34.2,
+ "pred_dist_best": {
+  "mst_2opt": 63,
+  "sa_2opt": 63,
+  "2opt_hill_climbing": 23
+ }
+}

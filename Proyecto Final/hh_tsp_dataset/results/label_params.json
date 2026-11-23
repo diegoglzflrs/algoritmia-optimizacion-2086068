@@ -1,0 +1,12 @@
+{
+ "schedule": "exponential",
+ "T0": 0.5,
+ "TF": 0.005,
+ "iters_per_node": 1000,
+ "hill_climbing_start": "aleatorio",
+ "tie_priority": [
+  "mst_2opt",
+  "2opt_hill_climbing",
+  "sa_2opt"
+ ]
+}

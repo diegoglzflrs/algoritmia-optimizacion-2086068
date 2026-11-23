@@ -1,0 +1,46 @@
+|--- n <= 12.50
+|   |--- std_coords <= 0.30
+|   |   |--- std_coords <= 0.15
+|   |   |   |--- class: mst_2opt
+|   |   |--- std_coords >  0.15
+|   |   |   |--- mean_nn_dist <= 0.18
+|   |   |   |   |--- class: 2opt_hill_climbing
+|   |   |   |--- mean_nn_dist >  0.18
+|   |   |   |   |--- class: mst_2opt
+|   |--- std_coords >  0.30
+|   |   |--- class: mst_2opt
+|--- n >  12.50
+|   |--- mean_pairwise_dist <= 0.67
+|   |   |--- mean_nn_dist <= 0.02
+|   |   |   |--- mean_pairwise_dist <= 0.12
+|   |   |   |   |--- class: 2opt_hill_climbing
+|   |   |   |--- mean_pairwise_dist >  0.12
+|   |   |   |   |--- class: mst_2opt
+|   |   |--- mean_nn_dist >  0.02
+|   |   |   |--- mean_nn_dist <= 0.14
+|   |   |   |   |--- std_coords <= 0.29
+|   |   |   |   |   |--- mean_nn_dist <= 0.11
+|   |   |   |   |   |   |--- class: sa_2opt
+|   |   |   |   |   |--- mean_nn_dist >  0.11
+|   |   |   |   |   |   |--- class: mst_2opt
+|   |   |   |   |--- std_coords >  0.29
+|   |   |   |   |   |--- mean_pairwise_dist <= 0.55
+|   |   |   |   |   |   |--- class: sa_2opt
+|   |   |   |   |   |--- mean_pairwise_dist >  0.55
+|   |   |   |   |   |   |--- class: sa_2opt
+|   |   |   |--- mean_nn_dist >  0.14
+|   |   |   |   |--- class: 2opt_hill_climbing
+|   |--- mean_pairwise_dist >  0.67
+|   |   |--- mean_nn_dist <= 0.05
+|   |   |   |--- mean_nn_dist <= 0.04
+|   |   |   |   |--- class: 2opt_hill_climbing
+|   |   |   |--- mean_nn_dist >  0.04
+|   |   |   |   |--- class: 2opt_hill_climbing
+|   |   |--- mean_nn_dist >  0.05
+|   |   |   |--- mean_nn_dist <= 0.06
+|   |   |   |   |--- class: mst_2opt
+|   |   |   |--- mean_nn_dist >  0.06
+|   |   |   |   |--- mean_centroid_dist <= 0.51
+|   |   |   |   |   |--- class: mst_2opt
+|   |   |   |   |--- mean_centroid_dist >  0.51
+|   |   |   |   |   |--- class: mst_2opt
